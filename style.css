@@ -1,5 +1,6 @@
 /* ==========================================================================
    PORTFOLIO STYLES - Mohammad Rokib Hasan
+   Dark blue theme with dotted background pattern
    ========================================================================== */
 
 /* Base Styles */
@@ -216,14 +217,22 @@ body {
         background-size: 15px 15px;
     }
     
+    body {
+        background-size: 15px 15px;
+    }
+    
     .contact-cards {
         flex-direction: column;
-        space-y: 1.5rem;
+        gap: 1.5rem;
     }
     
     .gradient-border-box {
         width: 16rem;
         height: 16rem;
+    }
+    
+    .contact-card {
+        padding: 24px 16px;
     }
 }
 
@@ -271,8 +280,10 @@ body {
         text-shadow: none;
     }
     
-    .hero-bg-dots {
-        background: none;
+    .hero-bg-dots,
+    body {
+        background: #121626;
+        background-image: none;
     }
 }
 
