@@ -1,474 +1,108 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mohammad Rokib Hasan</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" xintegrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #121626;
-            color: #d1d5db; /* Light gray text for contrast */
-            overflow-x: hidden; /* Prevent horizontal scroll */
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mohammad Rokib Hasan</title>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-        .highlight-text {
-            color: #42E4D4;
-        }
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
 
-        .gradient-border-box {
-            position: relative;
-            background: linear-gradient(135deg, #121626, #3b4260);
-            border-radius: 12px;
-            padding: 1px;
-            z-index: 1;
-        }
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" crossorigin="anonymous">
 
-        .gradient-border-box::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            border-radius: 12px;
-            padding: 2px;
-            background: linear-gradient(to right, #42E4D4, #68F4E8);
-            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-            -webkit-mask-composite: xor;
-            mask-composite: exclude;
-            z-index: -1;
-        }
-        
-        .hero-bg-dots {
-            background-image: radial-gradient(#333 1px, transparent 1px);
-            background-size: 20px 20px;
-        }
-
-        .glow-text {
-            animation: text-glow 2s ease-in-out infinite alternate;
-        }
-        
-        .glow-button {
-            animation: button-glow 2s ease-in-out infinite alternate;
-        }
-        
-        .glow-button-orange {
-            animation: button-glow-orange 2s ease-in-out infinite alternate;
-        }
-        
-        @keyframes text-glow {
-            0% {
-                text-shadow: 0 0 1px #42E4D4, 0 0 2px #42E4D4;
-            }
-            100% {
-                text-shadow: 0 0 2px #42E4D4, 0 0 4px #42E4D4;
-            }
-        }
-        
-        @keyframes button-glow {
-            0% {
-                box-shadow: 0 0 1px #42E4D4, 0 0 2px #42E4D4, 0 0 3px #42E4D4;
-            }
-            100% {
-                box-shadow: 0 0 2px #42E4D4, 0 0 4px #42E4D4, 0 0 6px #42E4D4;
-            }
-        }
-
-        @keyframes button-glow-orange {
-            0% {
-                box-shadow: 0 0 1px #f97316, 0 0 2px #f97316, 0 0 3px #f97316;
-            }
-            100% {
-                box-shadow: 0 0 2px #f97316, 0 0 4px #f97316, 0 0 6px #f97316;
-            }
-        }
-
-        /* Styles for the new contact cards */
-        .contact-card {
-            background-color: #1a1e2f;
-            border-radius: 12px;
-            padding: 24px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-            width: 100%; /* Ensure full width inside flex container */
-        }
-
-        .contact-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
-        }
-
-        .contact-icon-container {
-            width: 64px;
-            height: 64px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-shrink: 0;
-        }
-
-        .contact-icon {
-            color: #fff;
-            font-size: 32px;
-        }
-
-        .icon-email { background-color: #f7d23a; }
-        .icon-whatsapp { background-color: #25d366; }
-        .icon-linkedin { background-color: #0077b5; }
-    </style>
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
 </head>
 <body class="bg-gray-900 text-gray-300">
 
-    <!-- Header -->
-    <header class="fixed top-0 left-0 right-0 z-50 bg-[#121626] bg-opacity-80 backdrop-filter backdrop-blur-sm shadow-lg">
-        <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
-            <a href="#hero" class="text-xl font-bold text-white">
-                RH
-            </a>
-            <div class="hidden md:flex space-x-6 text-sm font-medium">
-                <a href="#about" class="hover:text-white transition-colors duration-300">About</a>
-                <a href="#skills" class="hover:text-white transition-colors duration-300">Skill</a>
-                <a href="#experience" class="hover:text-white transition-colors duration-300">Experience</a>
-                <a href="#projects" class="hover:text-white transition-colors duration-300">Projects</a>
-                <a href="#contact" class="hover:text-white transition-colors duration-300">Contact</a>
-                <a href="#" class="bg-teal-500 text-black font-semibold py-3 px-6 rounded-xl shadow-lg hover:bg-teal-400 transition-colors duration-300 flex items-center space-x-2 glow-button">
-                    <span>Resume</span>
-                </a>
-            </div>
-            <div class="md:hidden flex items-center">
-                <button id="menu-button" class="text-white focus:outline-none">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-                    </svg>
-                </button>
-            </div>
-        </nav>
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-[#121626] shadow-lg">
-                <a href="#about" class="block py-3 px-4 hover:bg-gray-800 transition-colors duration-300">About</a>
-                <a href="#skills" class="block py-3 px-4 hover:bg-gray-800 transition-colors duration-300">Skill</a>
-                <a href="#experience" class="block py-3 px-4 hover:bg-gray-800 transition-colors duration-300">Experience</a>
-                <a href="#projects" class="block py-3 px-4 hover:bg-gray-800 transition-colors duration-300">Projects</a>
-                <a href="#contact" class="block py-3 px-4 hover:bg-gray-800 transition-colors duration-300">Contact</a>
-            <a href="#" class="block py-3 px-6 bg-teal-500 text-black font-semibold hover:bg-teal-400 transition-colors duration-300 text-center">
-                Resume
-            </a>
+  <!-- Header -->
+  <header class="fixed top-0 left-0 right-0 z-50 bg-[#121626] bg-opacity-80 backdrop-filter backdrop-blur-sm shadow-lg">
+    <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
+      <a href="#hero" class="text-xl font-bold text-white">RH</a>
+      <div class="hidden md:flex space-x-6 text-sm font-medium items-center">
+        <a href="#about" class="hover:text-white transition">About</a>
+        <a href="#skills" class="hover:text-white transition">Skill</a>
+        <a href="#experience" class="hover:text-white transition">Experience</a>
+        <a href="#projects" class="hover:text-white transition">Projects</a>
+        <a href="#contact" class="hover:text-white transition">Contact</a>
+        <a href="#" class="bg-teal-500 text-black font-semibold py-2 px-4 rounded-lg shadow-lg hover:bg-teal-400 transition flex items-center glow-button text-sm">
+          Resume
+        </a>
+      </div>
+      <!-- Mobile Menu Button -->
+      <div class="md:hidden flex items-center">
+        <button id="menu-button" class="text-white focus:outline-none">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M4 6h16M4 12h16m-7 6h7"></path>
+          </svg>
+        </button>
+      </div>
+    </nav>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-[#121626] shadow-lg">
+      <a href="#about" class="block py-3 px-4 hover:bg-gray-800 transition">About</a>
+      <a href="#skills" class="block py-3 px-4 hover:bg-gray-800 transition">Skill</a>
+      <a href="#experience" class="block py-3 px-4 hover:bg-gray-800 transition">Experience</a>
+      <a href="#projects" class="block py-3 px-4 hover:bg-gray-800 transition">Projects</a>
+      <a href="#contact" class="block py-3 px-4 hover:bg-gray-800 transition">Contact</a>
+      <a href="#" class="block py-2 px-4 bg-teal-500 text-black font-semibold hover:bg-teal-400 transition text-center rounded-lg">
+        Resume
+      </a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="hero" class="relative overflow-hidden pt-28 pb-20 md:py-32 flex items-center justify-center min-h-screen hero-bg-dots">
+    <div class="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between">
+      
+      <!-- Left content -->
+      <div class="md:w-1/2 text-center md:text-left mb-10 md:mb-0 relative z-10">
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-4">
+          MOHAMMAD <br><span class="highlight-text">ROKIB</span> <br>HASAN
+        </h1>
+        <p class="text-lg sm:text-xl text-gray-300 mb-8">
+          I help people finding <br> 
+          <span class="highlight-text font-semibold glow-text">insights through data</span>
+        </p>
+        
+        <div class="flex justify-center md:justify-start space-x-4">
+          <a href="#projects" class="bg-teal-500 text-black font-semibold py-2 px-4 rounded-lg shadow-lg hover:bg-teal-400 transition flex items-center glow-button text-sm">
+            View Projects
+          </a>
+          <a href="#contact" class="bg-gray-800 text-white font-semibold py-2 px-4 rounded-lg shadow-lg hover:bg-gray-700 transition flex items-center text-sm">
+            Contact Me
+          </a>
         </div>
-    </header>
+      </div>
 
-    <!-- Hero Section -->
-    <section id="hero" class="relative overflow-hidden pt-28 pb-20 md:py-32 flex items-center justify-center min-h-screen hero-bg-dots">
-        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between">
-            <!-- Left side content -->
-            <div class="md:w-1/2 text-center md:text-left mb-10 md:mb-0 relative z-10">
-                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-4">
-                    MOHAMMAD <br><span class="highlight-text">ROKIB</span> <br>HASAN
-                </h1>
-                <p class="text-lg sm:text-xl text-gray-300 mb-8">
-                    I help people finding <br> <span class="highlight-text font-semibold glow-text">insights through data</span>
-                </p>
-                
-                <div class="flex justify-center md:justify-start space-x-4">
-                    <a href="#projects" class="bg-teal-500 text-black font-semibold py-3 px-6 rounded-xl shadow-lg hover:bg-teal-400 transition-colors duration-300 flex items-center space-x-2 glow-button">
-                        <span>View Projects</span>
-                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
-                    </a>
-                    <a href="#contact" class="bg-gray-800 text-white font-semibold py-3 px-6 rounded-xl shadow-lg hover:bg-gray-700 transition-colors duration-300 flex items-center space-x-2">
-                        <span>Contact Me</span>
-                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8m-9 13l-9-5V7l9 5 9-5v5l-9 5z"></path></svg>
-                    </a>
-                </div>
-            </div>
-
-            <!-- Right side image with gradient border -->
-            <div class="md:w-1/2 flex justify-center md:justify-end relative">
-                <div class="w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden gradient-border-box flex items-center justify-center relative">
-                    <div class="absolute inset-0 w-full h-full rounded-full bg-gradient-to-br from-teal-500 to-cyan-500 animate-pulse-slow"></div>
-                    <div class="relative w-[calc(100%-8px)] h-[calc(100%-8px)] bg-gray-800 rounded-full overflow-hidden z-10 flex items-center justify-center">
-                        <img src="https://placehold.co/400x400/121626/fff?text=Photo" alt="Mohammad Rokib Hasan" class="w-full h-full object-cover">
-                    </div>
-                </div>
-            </div>
+      <!-- Right image -->
+      <div class="md:w-1/2 flex justify-center md:justify-end relative">
+        <div class="w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden gradient-border-box flex items-center justify-center relative">
+          <div class="absolute inset-0 w-full h-full rounded-full bg-gradient-to-br from-teal-500 to-cyan-500 animate-pulse-slow"></div>
+          <div class="relative w-[calc(100%-8px)] h-[calc(100%-8px)] bg-gray-800 rounded-full overflow-hidden z-10 flex items-center justify-center">
+            <img src="assets/images/profile.jpg" alt="Mohammad Rokib Hasan" class="w-full h-full object-cover">
+          </div>
         </div>
-        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 text-gray-500 animate-bounce">
-            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
-            </svg>
-        </div>
-    </section>
+      </div>
+    </div>
+    <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 text-gray-500 animate-bounce">
+      <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+          d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+      </svg>
+    </div>
+  </section>
 
-    <!-- About Me Section -->
-    <section id="about" class="py-20 flex items-center justify-center">
-        <div class="container mx-auto px-4 max-w-4xl text-center">
-            <h2 class="text-3xl sm:text-4xl font-extrabold text-white mb-6">ABOUT ME</h2>
-            <p class="text-lg text-gray-400 leading-relaxed mb-6">
-                I started my career in 2017 as a Customer Service Associate, and it didn’t take long for me to discover the power of Excel. I still remember the first time I updated a file that helped over 200 colleagues serve customers more smoothly—it felt like I’d found a superpower. That spark led me to explore data analytics in 2021. Since then, I’ve been learning and applying tools like Power BI and SQL to solve real-world problems, whether at work, in organizations I collaborate with, or even for friends and family. My goal is simple: turn everyday data into insights that make decisions easier and processes smarter.
-            </p>
-        </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills" class="py-20 flex flex-col items-center justify-center bg-[#121626] text-gray-300">
-        <div class="container mx-auto px-4 text-center">
-            <h2 class="text-3xl sm:text-4xl font-extrabold text-white mb-4">SKILL</h2>
-            <p class="text-lg text-gray-400 mb-12">I've built a solid skill set in both technical and interpersonal areas, helping me transform data into actionable insights and collaborate effectively with others.</p>
-            
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8 max-w-4xl mx-auto">
-                <!-- Technical Skills -->
-                <div class="space-y-6">
-                    <h3 class="text-3xl font-bold text-white mb-6">Technical Skills</h3>
-                    <div class="flex flex-col space-y-4">
-                        <div class="flex items-center space-x-4 border-b border-gray-700 pb-4">
-                            <span class="text-lg font-medium">Microsoft Excel</span>
-                        </div>
-                        <div class="flex items-center space-x-4 border-b border-gray-700 pb-4">
-                            <span class="text-lg font-medium">Google Sheet</span>
-                        </div>
-                        <div class="flex items-center space-x-4 border-b border-gray-700 pb-4">
-                            <span class="text-lg font-medium">Power BI</span>
-                        </div>
-                        <div class="flex items-center space-x-4 border-b border-gray-700 pb-4">
-                            <span class="text-lg font-medium">SQL</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Soft Skills -->
-                <div class="space-y-6">
-                    <h3 class="text-3xl font-bold text-white mb-6">Soft Skills</h3>
-                    <div class="flex flex-col space-y-4">
-                        <div class="flex items-center space-x-4 border-b border-gray-700 pb-4">
-                            <span class="text-lg font-medium">Data Storytelling</span>
-                        </div>
-                        <div class="flex items-center space-x-4 border-b border-gray-700 pb-4">
-                            <span class="text-lg font-medium">Problem-Solving Mindset</span>
-                        </div>
-                        <div class="flex items-center space-x-4 border-b border-gray-700 pb-4">
-                            <span class="text-lg font-medium">Attention to Detail</span>
-                        </div>
-                        <div class="flex items-center space-x-4 border-b border-gray-700 pb-4">
-                            <span class="text-lg font-medium">Team Player</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Experience Section -->
-    <section id="experience" class="py-20 bg-[#121626] text-gray-300">
-        <div class="container mx-auto px-4 max-w-4xl text-center">
-            <h2 class="text-3xl sm:text-4xl font-extrabold text-white mb-12">EXPERIENCE</h2>
-
-            <!-- Job Cards -->
-            <div class="space-y-8">
-                <!-- Daraz Bangladesh - Route Dispatcher -->
-                <div class="bg-gray-800 rounded-xl p-6 text-left shadow-lg">
-                    <div class="flex justify-between items-baseline mb-2">
-                        <h3 class="text-2xl font-bold text-white">Route Dispatcher</h3>
-                        <p class="text-base font-bold text-gray-400">Aug 2024 – Present</p>
-                    </div>
-                    <p class="text-lg text-gray-400 mb-2">Daraz Bangladesh Limited</p>
-                    <p class="text-sm leading-relaxed text-gray-300">Planned and optimized delivery routes for maximum efficiency and timely deliveries. Monitored driver performance, reducing delays and improving customer experience. Learned to analyze logistics data and spot operational bottlenecks.</p>
-                </div>
-                
-                <!-- Daraz Bangladesh - Operation Associate -->
-                <div class="bg-gray-800 rounded-xl p-6 text-left shadow-lg">
-                    <div class="flex justify-between items-baseline mb-2">
-                        <h3 class="text-2xl font-bold text-white">Operation Associate</h3>
-                        <p class="text-base font-bold text-gray-400">Oct 2022 – Jul 2024</p>
-                    </div>
-                    <p class="text-lg text-gray-400 mb-2">Daraz Bangladesh Limited</p>
-                    <p class="text-sm leading-relaxed text-gray-300">Coordinated day-to-day warehouse and logistics operations. Analyzed operational data to identify inefficiencies and suggest process improvements. Collaborated with various teams to ensure smooth and timely order fulfillment.</p>
-                </div>
-                
-                <!-- Xtreme Solution -->
-                <div class="bg-gray-800 rounded-xl p-6 text-left shadow-lg">
-                    <div class="flex justify-between items-baseline mb-2">
-                        <h3 class="text-2xl font-bold text-white">Jr. Executive</h3>
-                        <p class="text-base font-bold text-gray-400">Aug 2021 – Sep 2021</p>
-                    </div>
-                    <p class="text-lg text-gray-400 mb-2">Xtreme Solution</p>
-                    <p class="text-sm leading-relaxed text-gray-300">Coordinated day-to-day operations and supported process improvements to enhance service quality. Worked closely with cross-functional teams, streamlining workflows and boosting efficiency. Discovered passion for using data to solve business problems.</p>
-                </div>
-
-                <!-- Genex Infosys Limited -->
-                <div class="bg-gray-800 rounded-xl p-6 text-left shadow-lg">
-                    <div class="flex justify-between items-baseline mb-2">
-                        <h3 class="text-2xl font-bold text-white">Customer Service Associate</h3>
-                        <p class="text-base font-bold text-gray-400">Dec 2017 – Aug 2020</p>
-                    </div>
-                    <p class="text-lg text-gray-400 mb-2">Genex Infosys Limited</p>
-                    <p class="text-sm leading-relaxed text-gray-300">Handled 120+ customers daily, achieved A-Bucket for 15 months straight, and won 2 Best Employee Awards. Promoted to team mentor in 3 months and trained 25–30 people, leading them to win Best Team Award. Built strong communication and mentoring skills.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Projects Section -->
-    <section id="projects" class="py-20 flex items-center justify-center hero-bg-dots">
-        <div class="container mx-auto px-4 text-center">
-            <h2 class="text-3xl sm:text-4xl font-extrabold text-white mb-12">PROJECTS</h2>
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
-
-                <!-- Project 1: E-commerce Operations Dashboard -->
-                <div class="bg-gray-800 rounded-xl p-6 text-left shadow-lg">
-                    <div class="flex items-center space-x-4 mb-4">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-teal-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
-                        </svg>
-                        <h3 class="text-xl font-bold text-white">E-commerce Operations Dashboard</h3>
-                    </div>
-                    <img src="https://placehold.co/600x400/121626/fff?text=Dashboard+Thumbnail" alt="E-commerce Dashboard Thumbnail" class="w-full h-auto rounded-lg mb-4">
-                    <p class="text-sm text-gray-400 mb-4">
-                        Interactive Power BI dashboard tracking key operational metrics including order fulfillment, customer satisfaction, and team performance.
-                    </p>
-                    <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="bg-gray-700 text-teal-400 text-xs font-semibold px-2.5 py-0.5 rounded-full">Power BI</span>
-                        <span class="bg-gray-700 text-teal-400 text-xs font-semibold px-2.5 py-0.5 rounded-full">SQL</span>
-                        <span class="bg-gray-700 text-teal-400 text-xs font-semibold px-2.5 py-0.5 rounded-full">Data Visualization</span>
-                    </div>
-                    <div class="flex space-x-4">
-                        <a href="#" class="bg-teal-500 text-black font-semibold py-2 px-4 rounded-xl shadow-lg hover:bg-teal-400 transition-colors duration-300 text-sm flex items-center space-x-2">
-                            <span>View Details</span>
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Project 2: Customer Churn Analysis -->
-                <div class="bg-gray-800 rounded-xl p-6 text-left shadow-lg">
-                    <div class="flex items-center space-x-4 mb-4">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-teal-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <circle cx="12" cy="12" r="10"></circle>
-                            <path d="M12 6v6l4 2"></path>
-                        </svg>
-                        <h3 class="text-xl font-bold text-white">Customer Churn Analysis</h3>
-                    </div>
-                    <img src="https://placehold.co/600x400/121626/fff?text=Churn+Analysis+Thumbnail" alt="Customer Churn Analysis Thumbnail" class="w-full h-auto rounded-lg mb-4">
-                    <p class="text-sm text-gray-400 mb-4">
-                        Analyzed customer behavior data to identify key factors leading to churn, creating a predictive model to proactively retain at-risk customers.
-                    </p>
-                    <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="bg-gray-700 text-teal-400 text-xs font-semibold px-2.5 py-0.5 rounded-full">Python</span>
-                        <span class="bg-gray-700 text-teal-400 text-xs font-semibold px-2.5 py-0.5 rounded-full">Jupyter Notebook</span>
-                        <span class="bg-gray-700 text-teal-400 text-xs font-semibold px-2.5 py-0.5 rounded-full">Machine Learning</span>
-                    </div>
-                    <div class="flex space-x-4">
-                        <a href="#" class="bg-teal-500 text-black font-semibold py-2 px-4 rounded-xl shadow-lg hover:bg-teal-400 transition-colors duration-300 text-sm flex items-center space-x-2">
-                            <span>View Details</span>
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Project 3: Regional Sales Performance -->
-                <div class="bg-gray-800 rounded-xl p-6 text-left shadow-lg">
-                    <div class="flex items-center space-x-4 mb-4">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-teal-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
-                            <line x1="12" y1="8" x2="12" y2="16"></line>
-                            <line x1="8" y1="12" x2="16" y2="12"></line>
-                        </svg>
-                        <h3 class="text-xl font-bold text-white">Regional Sales Performance</h3>
-                    </div>
-                    <img src="https://placehold.co/600x400/121626/fff?text=Sales+Performance+Thumbnail" alt="Regional Sales Performance Thumbnail" class="w-full h-auto rounded-lg mb-4">
-                    <p class="text-sm text-gray-400 mb-4">
-                        Developed an interactive Excel dashboard to track and visualize sales performance across different regions, identifying top-performing areas and growth opportunities.
-                    </p>
-                    <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="bg-gray-700 text-teal-400 text-xs font-semibold px-2.5 py-0.5 rounded-full">Excel</span>
-                        <span class="bg-gray-700 text-teal-400 text-xs font-semibold px-2.5 py-0.5 rounded-full">Data Cleaning</span>
-                        <span class="bg-gray-700 text-teal-400 text-xs font-semibold px-2.5 py-0.5 rounded-full">Reporting</span>
-                    </div>
-                    <div class="flex space-x-4">
-                        <a href="#" class="bg-teal-500 text-black font-semibold py-2 px-4 rounded-xl shadow-lg hover:bg-teal-400 transition-colors duration-300 text-sm flex items-center space-x-2">
-                            <span>View Details</span>
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
-                        </a>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="py-20 flex flex-col items-center justify-center bg-[#121626] text-gray-300">
-        <div class="container mx-auto px-4 text-center max-w-2xl">
-            <h2 class="text-3xl sm:text-4xl font-extrabold text-white mb-2">CONTACT ME</h2>
-            <p class="text-md text-gray-400 mb-12">I typically respond within 24 hours.</p>
-            <div class="flex flex-col sm:flex-row items-center justify-center space-y-6 sm:space-y-0 sm:space-x-4">
-                <!-- Email Card -->
-                <div class="contact-card flex flex-col items-center justify-center text-center">
-                    <div class="contact-icon-container icon-email mb-4">
-                        <i class="fa-solid fa-envelope contact-icon"></i>
-                    </div>
-                    <h3 class="text-lg font-semibold text-white">Email</h3>
-                    <a href="mailto:rokib.hasan@email.com" class="text-sm text-gray-400 hover:underline">rokib.hasan@email.com</a>
-                </div>
-                
-                <!-- WhatsApp Card -->
-                <div class="contact-card flex flex-col items-center justify-center text-center">
-                    <div class="contact-icon-container icon-whatsapp mb-4">
-                        <i class="fa-brands fa-whatsapp contact-icon"></i>
-                    </div>
-                    <h3 class="text-lg font-semibold text-white">WhatsApp</h3>
-                    <a href="https://wa.me/1234567890" class="text-sm text-gray-400 hover:underline">+880 1234 567890</a>
-                </div>
-                
-                <!-- LinkedIn Card -->
-                <div class="contact-card flex flex-col items-center justify-center text-center">
-                    <div class="contact-icon-container icon-linkedin mb-4">
-                        <i class="fa-brands fa-linkedin contact-icon"></i>
-                    </div>
-                    <h3 class="text-lg font-semibold text-white">LinkedIn</h3>
-                    <a href="https://www.linkedin.com/in/mohammad-rokib-hasan" target="_blank" class="text-sm text-gray-400 hover:underline">mohammad-rokib-hasan</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="py-6 bg-[#121626] text-center text-gray-500">
-        <div class="container mx-auto px-4">
-            <p class="text-sm">&copy; 2024 Mohammad Rokib Hasan. All rights reserved.</p>
-        </div>
-    </footer>
-
-    <script>
-        const menuButton = document.getElementById('menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
-
-        menuButton.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-
-        // Close mobile menu when a link is clicked
-        mobileMenu.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
-            });
-        });
-
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-    </script>
+  <!-- More sections here... -->
+  
+  <!-- JS -->
+  <script src="script.js"></script>
 </body>
 </html>
-
