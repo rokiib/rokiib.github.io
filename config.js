@@ -21,11 +21,10 @@ const portfolioConfig = {
         
         // 📧 CONTACT INFORMATION
         // Update with your real contact details
-        email: "rokib.hasan@email.com",
-        phone: "+880 1234 567890",
-        whatsappNumber: "8801234567890", // Format: country code + number (no spaces)
-        linkedinUsername: "mohammad-rokib-hasan",
-        linkedinUrl: "https://www.linkedin.com/in/mohammad-rokib-hasan",
+        email: "rokibchi@email.com",
+        whatsappNumber: "8801866607355", // Format: country code + number (no spaces)
+        linkedinUsername: "Rokib Hasan",
+        linkedinUrl: "https://www.linkedin.com/in/rokiib/",
         
         // 📄 RESUME LINK
         // Add your resume link here (Google Drive, Dropbox, etc.)
@@ -172,4 +171,5 @@ const themeConfig = {
    
    ⚠️  IMPORTANT: Only edit text between quotes " "
    ⚠️  Don't change punctuation like commas, brackets, or semicolons
+
    ========================================================================== */
