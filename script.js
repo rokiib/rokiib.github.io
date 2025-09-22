@@ -212,7 +212,7 @@ function loadContactSection() {
                     <i class="fa-solid fa-envelope contact-icon"></i>
                 </div>
                 <h3 class="text-lg font-semibold text-white">Email</h3>
-                <a href="mailto:rokib.hasan@email.com" class="text-sm text-gray-400 hover:underline">rokib.hasan@email.com</a>
+                <a href="mailto:rokibchi@gmail.com" class="text-sm text-gray-400 hover:underline">rokib.chi@email.com</a>
             </div>
             
             <!-- WhatsApp Card -->
@@ -221,7 +221,7 @@ function loadContactSection() {
                     <i class="fa-brands fa-whatsapp contact-icon"></i>
                 </div>
                 <h3 class="text-lg font-semibold text-white">WhatsApp</h3>
-                <a href="https://wa.me/8801234567890" class="text-sm text-gray-400 hover:underline">+880 1234 567890</a>
+                <a href="https://wa.me/8801866607355" class="text-sm text-gray-400 hover:underline">+880 1866 607355</a>
             </div>
             
             <!-- LinkedIn Card -->
@@ -230,7 +230,7 @@ function loadContactSection() {
                     <i class="fa-brands fa-linkedin contact-icon"></i>
                 </div>
                 <h3 class="text-lg font-semibold text-white">LinkedIn</h3>
-                <a href="https://www.linkedin.com/in/mohammad-rokib-hasan" target="_blank" class="text-sm text-gray-400 hover:underline">mohammad-rokib-hasan</a>
+                <a href="https://www.linkedin.com/in/rokiib" target="_blank" class="text-sm text-gray-400 hover:underline">Rokib Hasan</a>
             </div>
         `;
     }
