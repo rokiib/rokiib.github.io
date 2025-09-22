@@ -212,7 +212,7 @@ function loadContactSection() {
                     <i class="fa-solid fa-envelope contact-icon"></i>
                 </div>
                 <h3 class="text-lg font-semibold text-white">Email</h3>
-                <a href="mailto:rokibchi@gmail.com" class="text-sm text-gray-400 hover:underline">rokib.chi@email.com</a>
+                <a href="mailto:rokibchi@gmail.com" class="text-sm text-gray-400 hover:underline">rokibchi@gmail.com</a>
             </div>
             
             <!-- WhatsApp Card -->
