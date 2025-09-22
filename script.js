@@ -29,8 +29,8 @@ function loadStaticContent() {
     loadHeroSection();
     loadAboutSection();
     loadSkillsSection();
-    loadExperienceSection();
     loadProjectsSection();
+    loadExperienceSection();
     loadContactSection();
 }
 
@@ -95,50 +95,6 @@ function loadSkillsSection() {
     }
 }
 
-function loadExperienceSection() {
-    const experienceContainer = document.getElementById('experience-container');
-    
-    if (experienceContainer) {
-        const experiences = [
-            {
-                title: "Route Dispatcher",
-                company: "Daraz Bangladesh Limited",
-                duration: "Aug 2024 – Present",
-                description: "Planned and optimized delivery routes for maximum efficiency and timely deliveries. Monitored driver performance, reducing delays and improving customer experience. Learned to analyze logistics data and spot operational bottlenecks."
-            },
-            {
-                title: "Operation Associate",
-                company: "Daraz Bangladesh Limited",
-                duration: "Oct 2022 – Jul 2024",
-                description: "Coordinated day-to-day warehouse and logistics operations. Analyzed operational data to identify inefficiencies and suggest process improvements. Collaborated with various teams to ensure smooth and timely order fulfillment."
-            },
-            {
-                title: "Jr. Executive",
-                company: "Xtreme Solution",
-                duration: "Aug 2021 – Sep 2021",
-                description: "Coordinated day-to-day operations and supported process improvements to enhance service quality. Worked closely with cross-functional teams, streamlining workflows and boosting efficiency. Discovered passion for using data to solve business problems."
-            },
-            {
-                title: "Customer Service Associate",
-                company: "Genex Infosys Limited",
-                duration: "Dec 2017 – Aug 2020",
-                description: "Handled 120+ customers daily, achieved A-Bucket for 15 months straight, and won 2 Best Employee Awards. Promoted to team mentor in 3 months and trained 25–30 people, leading them to win Best Team Award. Built strong communication and mentoring skills."
-            }
-        ];
-        
-        experienceContainer.innerHTML = experiences.map(job => `
-            <div class="bg-gray-800 rounded-xl p-6 text-left shadow-lg transition-all hover:transform hover:scale-105">
-                <div class="flex justify-between items-baseline mb-2">
-                    <h3 class="text-2xl font-bold text-white">${job.title}</h3>
-                    <p class="text-base font-bold text-gray-400">${job.duration}</p>
-                </div>
-                <p class="text-lg text-gray-400 mb-2">${job.company}</p>
-                <p class="text-sm leading-relaxed text-gray-300">${job.description}</p>
-            </div>
-        `).join('');
-    }
-}
-
 function loadProjectsSection() {
     const projectsContainer = document.getElementById('projects-container');
     
@@ -185,18 +141,61 @@ function loadProjectsSection() {
                     <h3 class="text-xl font-bold text-white">${project.title}</h3>
                 </div>
                 <img src="${project.image}" alt="${project.title} Thumbnail" class="w-full h-auto rounded-lg mb-4">
-                <p class="text-sm text-gray-400 mb-4">${project.description}</p>
                 <div class="flex flex-wrap gap-2 mb-4">
                     ${project.technologies.map(tech => `
                         <span class="bg-gray-700 text-teal-400 text-xs font-semibold px-2.5 py-0.5 rounded-full">${tech}</span>
                     `).join('')}
                 </div>
                 <div class="flex space-x-4">
-                    <a href="${project.link}" class="bg-teal-500 text-black font-semibold py-2 px-4 rounded-xl shadow-lg hover:bg-teal-400 transition-colors duration-300 text-sm flex items-center space-x-2">
+                    <a href="${project.link}" class="bg-teal-500 text-black font-semibold py-2 px-4 rounded-xl shadow-lg hover:bg-teal-400 transition-colors duration-300 text-sm flex items-center space-x-2" onclick="showComingSoonAlert(event)">
                         <span>View Details</span>
                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
                     </a>
                 </div>
+            </div>
+        `).join('');
+    }
+}
+
+function loadExperienceSection() {
+    const experienceContainer = document.getElementById('experience-container');
+    
+    if (experienceContainer) {
+        const experiences = [
+            {
+                title: "Route Dispatcher",
+                company: "Daraz Bangladesh Limited",
+                duration: "Aug 2024 – Present",
+                description: "Planned and optimized delivery routes for maximum efficiency and timely deliveries. Monitored driver performance, reducing delays and improving customer experience. Learned to analyze logistics data and spot operational bottlenecks."
+            },
+            {
+                title: "Operation Associate",
+                company: "Daraz Bangladesh Limited",
+                duration: "Oct 2022 – Jul 2024",
+                description: "Coordinated day-to-day warehouse and logistics operations. Analyzed operational data to identify inefficiencies and suggest process improvements. Collaborated with various teams to ensure smooth and timely order fulfillment."
+            },
+            {
+                title: "Jr. Executive",
+                company: "Xtreme Solution",
+                duration: "Aug 2021 – Sep 2021",
+                description: "Coordinated day-to-day operations and supported process improvements to enhance service quality. Worked closely with cross-functional teams, streamlining workflows and boosting efficiency. Discovered passion for using data to solve business problems."
+            },
+            {
+                title: "Customer Service Associate",
+                company: "Genex Infosys Limited",
+                duration: "Dec 2017 – Aug 2020",
+                description: "Handled 120+ customers daily, achieved A-Bucket for 15 months straight, and won 2 Best Employee Awards. Promoted to team mentor in 3 months and trained 25–30 people, leading them to win Best Team Award. Built strong communication and mentoring skills."
+            }
+        ];
+        
+        experienceContainer.innerHTML = experiences.map(job => `
+            <div class="bg-gray-800 rounded-xl p-6 text-left shadow-lg transition-all hover:transform hover:scale-105">
+                <div class="flex justify-between items-baseline mb-2">
+                    <h3 class="text-2xl font-bold text-white">${job.title}</h3>
+                    <p class="text-base font-bold text-gray-400">${job.duration}</p>
+                </div>
+                <p class="text-lg text-gray-400 mb-2">${job.company}</p>
+                <p class="text-sm leading-relaxed text-gray-300">${job.description}</p>
             </div>
         `).join('');
     }
@@ -222,7 +221,7 @@ function loadContactSection() {
                     <i class="fa-brands fa-whatsapp contact-icon"></i>
                 </div>
                 <h3 class="text-lg font-semibold text-white">WhatsApp</h3>
-                <a href="https://wa.me/1234567890" class="text-sm text-gray-400 hover:underline">+880 1234 567890</a>
+                <a href="https://wa.me/8801234567890" class="text-sm text-gray-400 hover:underline">+880 1234 567890</a>
             </div>
             
             <!-- LinkedIn Card -->
@@ -264,7 +263,7 @@ function setupEventListeners() {
     resumeButtons.forEach(button => {
         button.addEventListener('click', (e) => {
             e.preventDefault();
-            alert('Resume will be available soon!');
+            alert('Resume will be available soon! Please contact me for more details.');
         });
     });
 
@@ -303,3 +302,42 @@ function updateCopyrightYear() {
         yearElement.textContent = new Date().getFullYear();
     }
 }
+
+// ==========================================================================
+// UTILITY FUNCTIONS
+// ==========================================================================
+
+function showComingSoonAlert(event) {
+    event.preventDefault();
+    alert('🚀 Project details coming soon! Please contact me to learn more about this project.');
+}
+
+// ==========================================================================
+// ERROR HANDLING
+// ==========================================================================
+
+window.addEventListener('error', function(e) {
+    console.error('Portfolio Error:', e.error);
+});
+
+// ==========================================================================
+// PERFORMANCE OPTIMIZATION
+// ==========================================================================
+
+// Preload critical images
+function preloadImages() {
+    const criticalImages = [
+        'https://placehold.co/400x400/121626/fff?text=Photo',
+        'https://placehold.co/600x400/121626/fff?text=Dashboard+Thumbnail',
+        'https://placehold.co/600x400/121626/fff?text=Churn+Analysis+Thumbnail',
+        'https://placehold.co/600x400/121626/fff?text=Sales+Performance+Thumbnail'
+    ];
+    
+    criticalImages.forEach(src => {
+        const img = new Image();
+        img.src = src;
+    });
+}
+
+// Initialize preloading after page load
+window.addEventListener('load', preloadImages);
