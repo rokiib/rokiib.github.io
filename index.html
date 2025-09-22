@@ -1,108 +1,187 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mohammad Rokib Hasan</title>
-  
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-
-  <!-- Tailwind CSS -->
-  <script src="https://cdn.tailwindcss.com"></script>
-
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" crossorigin="anonymous">
-
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohammad Rokib Hasan - Data Analytics Portfolio</title>
+    
+    <!-- External Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- External Libraries -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body class="bg-gray-900 text-gray-300">
 
-  <!-- Header -->
-  <header class="fixed top-0 left-0 right-0 z-50 bg-[#121626] bg-opacity-80 backdrop-filter backdrop-blur-sm shadow-lg">
-    <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
-      <a href="#hero" class="text-xl font-bold text-white">RH</a>
-      <div class="hidden md:flex space-x-6 text-sm font-medium items-center">
-        <a href="#about" class="hover:text-white transition">About</a>
-        <a href="#skills" class="hover:text-white transition">Skill</a>
-        <a href="#experience" class="hover:text-white transition">Experience</a>
-        <a href="#projects" class="hover:text-white transition">Projects</a>
-        <a href="#contact" class="hover:text-white transition">Contact</a>
-        <a href="#" class="bg-teal-500 text-black font-semibold py-2 px-4 rounded-lg shadow-lg hover:bg-teal-400 transition flex items-center glow-button text-sm">
-          Resume
-        </a>
-      </div>
-      <!-- Mobile Menu Button -->
-      <div class="md:hidden flex items-center">
-        <button id="menu-button" class="text-white focus:outline-none">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-              d="M4 6h16M4 12h16m-7 6h7"></path>
-          </svg>
-        </button>
-      </div>
-    </nav>
-    <!-- Mobile Menu -->
-    <div id="mobile-menu" class="hidden md:hidden bg-[#121626] shadow-lg">
-      <a href="#about" class="block py-3 px-4 hover:bg-gray-800 transition">About</a>
-      <a href="#skills" class="block py-3 px-4 hover:bg-gray-800 transition">Skill</a>
-      <a href="#experience" class="block py-3 px-4 hover:bg-gray-800 transition">Experience</a>
-      <a href="#projects" class="block py-3 px-4 hover:bg-gray-800 transition">Projects</a>
-      <a href="#contact" class="block py-3 px-4 hover:bg-gray-800 transition">Contact</a>
-      <a href="#" class="block py-2 px-4 bg-teal-500 text-black font-semibold hover:bg-teal-400 transition text-center rounded-lg">
-        Resume
-      </a>
-    </div>
-  </header>
-
-  <!-- Hero Section -->
-  <section id="hero" class="relative overflow-hidden pt-28 pb-20 md:py-32 flex items-center justify-center min-h-screen hero-bg-dots">
-    <div class="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between">
-      
-      <!-- Left content -->
-      <div class="md:w-1/2 text-center md:text-left mb-10 md:mb-0 relative z-10">
-        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-4">
-          MOHAMMAD <br><span class="highlight-text">ROKIB</span> <br>HASAN
-        </h1>
-        <p class="text-lg sm:text-xl text-gray-300 mb-8">
-          I help people finding <br> 
-          <span class="highlight-text font-semibold glow-text">insights through data</span>
-        </p>
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-[#121626] bg-opacity-80 backdrop-filter backdrop-blur-sm shadow-lg">
+        <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="#hero" class="text-xl font-bold text-white">RH</a>
+            
+            <!-- Desktop Navigation -->
+            <div class="hidden md:flex space-x-6 text-sm font-medium items-center">
+                <a href="#about" class="hover:text-white transition-colors duration-300">About</a>
+                <a href="#skills" class="hover:text-white transition-colors duration-300">Skills</a>
+                <a href="#projects" class="hover:text-white transition-colors duration-300">Projects</a>
+                <a href="#experience" class="hover:text-white transition-colors duration-300">Experience</a>
+                <a href="#contact" class="hover:text-white transition-colors duration-300">Contact</a>
+                <a id="resume-btn" href="#" class="bg-teal-500 text-black font-semibold py-2 px-4 rounded-lg shadow-lg hover:bg-teal-400 transition-colors duration-300 glow-button">
+                    <span>Resume</span>
+                </a>
+            </div>
+            
+            <!-- Mobile Menu Button -->
+            <div class="md:hidden flex items-center">
+                <button id="menu-button" class="text-white focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+        </nav>
         
-        <div class="flex justify-center md:justify-start space-x-4">
-          <a href="#projects" class="bg-teal-500 text-black font-semibold py-2 px-4 rounded-lg shadow-lg hover:bg-teal-400 transition flex items-center glow-button text-sm">
-            View Projects
-          </a>
-          <a href="#contact" class="bg-gray-800 text-white font-semibold py-2 px-4 rounded-lg shadow-lg hover:bg-gray-700 transition flex items-center text-sm">
-            Contact Me
-          </a>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-[#121626] shadow-lg">
+            <a href="#about" class="block py-3 px-4 hover:bg-gray-800 transition-colors duration-300">About</a>
+            <a href="#skills" class="block py-3 px-4 hover:bg-gray-800 transition-colors duration-300">Skills</a>
+            <a href="#projects" class="block py-3 px-4 hover:bg-gray-800 transition-colors duration-300">Projects</a>
+            <a href="#experience" class="block py-3 px-4 hover:bg-gray-800 transition-colors duration-300">Experience</a>
+            <a href="#contact" class="block py-3 px-4 hover:bg-gray-800 transition-colors duration-300">Contact</a>
+            <a id="mobile-resume-btn" href="#" class="block py-3 px-6 bg-teal-500 text-black font-semibold hover:bg-teal-400 transition-colors duration-300 text-center">Resume</a>
         </div>
-      </div>
+    </header>
 
-      <!-- Right image -->
-      <div class="md:w-1/2 flex justify-center md:justify-end relative">
-        <div class="w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden gradient-border-box flex items-center justify-center relative">
-          <div class="absolute inset-0 w-full h-full rounded-full bg-gradient-to-br from-teal-500 to-cyan-500 animate-pulse-slow"></div>
-          <div class="relative w-[calc(100%-8px)] h-[calc(100%-8px)] bg-gray-800 rounded-full overflow-hidden z-10 flex items-center justify-center">
-            <img src="assets/images/profile.jpg" alt="Mohammad Rokib Hasan" class="w-full h-full object-cover">
-          </div>
+    <!-- Hero Section -->
+    <section id="hero" class="relative overflow-hidden pt-28 pb-20 md:py-32 flex items-center justify-center min-h-screen hero-bg-dots">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between">
+            <!-- Left side content -->
+            <div class="md:w-1/2 text-center md:text-left mb-10 md:mb-0 relative z-10">
+                <h1 id="hero-name" class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-4">
+                    <!-- Dynamic content loads here -->
+                </h1>
+                <p id="hero-tagline" class="text-lg sm:text-xl text-gray-300 mb-8">
+                    <!-- Dynamic content loads here -->
+                </p>
+                
+                <div class="flex justify-center md:justify-start space-x-4">
+                    <a href="#projects" class="bg-teal-500 text-black font-semibold py-3 px-6 rounded-xl shadow-lg hover:bg-teal-400 transition-colors duration-300 flex items-center space-x-2 glow-button">
+                        <span>View Projects</span>
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                        </svg>
+                    </a>
+                    <a href="#contact" class="bg-gray-800 text-white font-semibold py-3 px-6 rounded-xl shadow-lg hover:bg-gray-700 transition-colors duration-300 flex items-center space-x-2">
+                        <span>Contact Me</span>
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8m-9 13l-9-5V7l9 5 9-5v5l-9 5z"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Right side image -->
+            <div class="md:w-1/2 flex justify-center md:justify-end relative">
+                <div class="w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden gradient-border-box flex items-center justify-center relative">
+                    <div class="absolute inset-0 w-full h-full rounded-full bg-gradient-to-br from-teal-500 to-cyan-500 animate-pulse-slow"></div>
+                    <div class="relative w-[calc(100%-8px)] h-[calc(100%-8px)] bg-gray-800 rounded-full overflow-hidden z-10 flex items-center justify-center">
+                        <img id="profile-image" src="" alt="Mohammad Rokib Hasan" class="w-full h-full object-cover">
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-    <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 text-gray-500 animate-bounce">
-      <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-          d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
-      </svg>
-    </div>
-  </section>
+        
+        <!-- Scroll indicator -->
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 text-gray-500 animate-bounce">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+            </svg>
+        </div>
+    </section>
 
-  <!-- More sections here... -->
-  
-  <!-- JS -->
-  <script src="script.js"></script>
+    <!-- About Me Section -->
+    <section id="about" class="py-20 flex items-center justify-center">
+        <div class="container mx-auto px-4 max-w-4xl text-center">
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-white mb-6">ABOUT ME</h2>
+            <p id="about-text" class="text-lg text-gray-400 leading-relaxed mb-6">
+                <!-- Dynamic content loads here -->
+            </p>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 flex flex-col items-center justify-center bg-[#121626] text-gray-300">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-white mb-4">SKILLS</h2>
+            <p id="skills-description" class="text-lg text-gray-400 mb-12">
+                <!-- Dynamic content loads here -->
+            </p>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <!-- Technical Skills -->
+                <div class="space-y-6">
+                    <h3 class="text-3xl font-bold text-white mb-6">Technical Skills</h3>
+                    <div id="technical-skills" class="flex flex-col space-y-4">
+                        <!-- Dynamic content loads here -->
+                    </div>
+                </div>
+
+                <!-- Soft Skills -->
+                <div class="space-y-6">
+                    <h3 class="text-3xl font-bold text-white mb-6">Soft Skills</h3>
+                    <div id="soft-skills" class="flex flex-col space-y-4">
+                        <!-- Dynamic content loads here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 flex items-center justify-center hero-bg-dots">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-white mb-12">PROJECTS</h2>
+            <div id="projects-container" class="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
+                <!-- Dynamic content loads here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-20 bg-[#121626] text-gray-300">
+        <div class="container mx-auto px-4 max-w-4xl text-center">
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-white mb-12">EXPERIENCE</h2>
+            <div id="experience-container" class="space-y-8">
+                <!-- Dynamic content loads here -->
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 flex flex-col items-center justify-center bg-[#121626] text-gray-300">
+        <div class="container mx-auto px-4 text-center max-w-2xl">
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-white mb-2">CONTACT ME</h2>
+            <p class="text-md text-gray-400 mb-12">I typically respond within 24 hours.</p>
+            <div id="contact-cards" class="flex flex-col sm:flex-row items-center justify-center space-y-6 sm:space-y-0 sm:space-x-4">
+                <!-- Dynamic content loads here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-6 bg-[#121626] text-center text-gray-500">
+        <div class="container mx-auto px-4">
+            <p class="text-sm">&copy; <span id="current-year"></span> Mohammad Rokib Hasan. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript Files -->
+    <script src="config.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
