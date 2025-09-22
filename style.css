@@ -52,6 +52,6 @@ body {
 }
 
 @keyframes button-glow {
-  0% { box-shadow: 0 0 1px #42E4D4, 0 0 2px #42E4D4, 0 0 3px #42E4D4; }
-  100% { box-shadow: 0 0 2px #42E4D4, 0 0 4px #42E4D4, 0 0 6px #42E4D4; }
+  0% { box-shadow: 0 0 1px #42E4D4, 0 0 2px #42E4D4, 0 0 2px #42E4D4; }
+  100% { box-shadow: 0 0 2px #42E4D4, 0 0 4px #42E4D4, 0 0 4px #42E4D4; }
 }
