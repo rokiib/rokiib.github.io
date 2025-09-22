@@ -341,3 +341,36 @@ function preloadImages() {
 
 // Initialize preloading after page load
 window.addEventListener('load', preloadImages);
+
+
+function loadContactSection() {
+    const contactCards = document.getElementById('contact-cards');
+    
+    if (contactCards) {
+        contactCards.innerHTML = `
+            <a href="mailto:rokibchi@gmail.com" class="contact-card flex flex-col items-center justify-center text-center">
+                <div class="contact-icon-container icon-email mb-4">
+                    <i class="fa-solid fa-envelope contact-icon"></i>
+                </div>
+                <h3 class="text-lg font-semibold text-white">Email</h3>
+                <span class="text-sm text-gray-400 hover:underline">rokibchi@gmail.com</span>
+            </a>
+            
+            <a href="https://wa.me/8801866607355" class="contact-card flex flex-col items-center justify-center text-center" target="_blank">
+                <div class="contact-icon-container icon-whatsapp mb-4">
+                    <i class="fa-brands fa-whatsapp contact-icon"></i>
+                </div>
+                <h3 class="text-lg font-semibold text-white">WhatsApp</h3>
+                <span class="text-sm text-gray-400 hover:underline">+880 1866 607355</span>
+            </a>
+            
+            <a href="https://www.linkedin.com/in/rokiib" class="contact-card flex flex-col items-center justify-center text-center" target="_blank">
+                <div class="contact-icon-container icon-linkedin mb-4">
+                    <i class="fa-brands fa-linkedin contact-icon"></i>
+                </div>
+                <h3 class="text-lg font-semibold text-white">LinkedIn</h3>
+                <span class="text-sm text-gray-400 hover:underline">Rokib Hasan</span>
+            </a>
+        `;
+    }
+}
