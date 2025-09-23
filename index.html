@@ -8,6 +8,9 @@
     <meta name="author" content="Mohammad Rokib Hasan">
     <title>Mohammad Rokib Hasan - Data Analytics Portfolio</title>
     
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%2348B3AF'/><text x='50' y='65' font-family='Arial, sans-serif' font-size='45' font-weight='bold' text-anchor='middle' fill='white'>RH</text></svg>">
+    
     <!-- External Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,17 +21,144 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
     
     <!-- Custom Styles -->
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body class="bg-white text-gray-800">
+    <style>
+        /* Eye-friendly color scheme - Reduced contrast and warmer tones */
+        :root {
+            --primary-color: #48B3AF;
+            --primary-hover: #3da39f;
+            --bg-primary: #fefefe; /* Slightly warmer white */
+            --bg-secondary: #f8f9fa; /* Softer grey background */
+            --text-primary: #2d3748; /* Softer dark grey */
+            --text-secondary: #4a5568; /* Medium grey */
+            --text-muted: #718096; /* Light grey */
+            --border-color: #e2e8f0; /* Subtle borders */
+        }
 
-    <!-- 
-    ====================================================================
-    HEADER NAVIGATION - MODERN GLASS DESIGN
-    TO UPDATE NAVIGATION: Change the href links and text below
-    ==================================================================== 
-    -->
-    <header class="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-lg shadow-sm border-b border-gray-200">
+        * {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+            font-weight: 400;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* Header styles */
+        header {
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            transition: all 0.3s ease;
+            background-color: rgba(254, 254, 254, 0.85);
+        }
+
+        /* Button styles */
+        .btn-primary {
+            background-color: var(--primary-color);
+            border: 2px solid var(--primary-color);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--primary-hover);
+            border-color: var(--primary-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(72, 179, 175, 0.25);
+        }
+
+        /* Card styles with softer shadows */
+        .modern-card {
+            background: var(--bg-primary);
+            border-radius: 16px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06), 0 1px 3px rgba(0, 0, 0, 0.04);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid var(--border-color);
+        }
+
+        .modern-card:hover {
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08), 0 4px 8px rgba(0, 0, 0, 0.05);
+            transform: translateY(-2px);
+        }
+
+        /* Softer background sections */
+        .bg-gray-50 {
+            background-color: var(--bg-secondary) !important;
+        }
+
+        /* Text color adjustments */
+        .text-gray-800 {
+            color: var(--text-primary) !important;
+        }
+
+        .text-gray-600 {
+            color: var(--text-secondary) !important;
+        }
+
+        .text-gray-500 {
+            color: var(--text-muted) !important;
+        }
+
+        /* Professional documentation styling */
+        .project-documentation {
+            background: var(--bg-primary);
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+        }
+
+        .doc-section {
+            border-bottom: 1px solid var(--border-color);
+            padding: 1.5rem;
+        }
+
+        .doc-section:last-child {
+            border-bottom: none;
+        }
+
+        .methodology-step {
+            background: var(--bg-secondary);
+            border-left: 4px solid var(--primary-color);
+            padding: 1rem;
+            margin: 0.5rem 0;
+        }
+
+        .metric-card {
+            background: linear-gradient(135deg, var(--primary-color), var(--primary-hover));
+            color: white;
+            border-radius: 8px;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        /* GitHub button styling */
+        .github-btn {
+            background: #24292e;
+            color: white;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .github-btn:hover {
+            background: #1a1e22;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(36, 41, 46, 0.3);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER NAVIGATION -->
+    <header class="fixed top-0 left-0 right-0 z-50 shadow-sm border-b border-gray-200">
         <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
             <!-- Logo -->
             <a href="#hero" class="text-xl font-bold text-gray-800 hover:text-[#48B3AF] transition-colors">RH</a>
@@ -66,23 +196,16 @@
         </div>
     </header>
 
-    <!-- 
-    ====================================================================
-    HERO SECTION - MODERN CLEAN DESIGN
-    TO UPDATE: Change name, tagline, or hero image path
-    ==================================================================== 
-    -->
-    <section id="hero" class="relative pt-24 pb-16 md:pt-32 md:pb-24 min-h-screen flex items-center bg-gradient-to-br from-gray-50 to-white">
+    <!-- HERO SECTION -->
+    <section id="hero" class="relative pt-24 pb-16 md:pt-32 md:pb-24 min-h-screen flex items-center">
         <div class="container mx-auto px-6 flex flex-col md:flex-row items-center justify-between">
             <!-- Left side content -->
             <div class="md:w-1/2 text-center md:text-left mb-10 md:mb-0">
-                <!-- HERO NAME: Update this text to change your name -->
                 <h1 class="text-5xl sm:text-6xl lg:text-7xl font-light text-gray-900 leading-tight mb-6">
                     MOHAMMAD <br>
                     <span class="font-bold text-[#48B3AF]">ROKIB</span> <br>
                     <span class="font-light">HASAN</span>
                 </h1>
-                <!-- HERO TAGLINE: Update this text to change your tagline -->
                 <p class="text-xl sm:text-2xl text-gray-600 mb-8 leading-relaxed">
                     Transforming data into <br> 
                     <span class="text-[#48B3AF] font-semibold">actionable insights</span>
@@ -109,18 +232,15 @@
                 <div class="relative">
                     <div class="w-80 h-80 lg:w-96 lg:h-96 rounded-full bg-gradient-to-br from-[#48B3AF] to-[#3da39f] p-1 shadow-2xl">
                         <div class="w-full h-full bg-white rounded-full p-4 flex items-center justify-center">
-                            <!-- HERO IMAGE: Replace the src path to use your own image -->
                             <img src="https://rokiib.github.io/assets/hero.png" alt="Mohammad Rokib Hasan" class="w-full h-full object-cover rounded-full">
                         </div>
                     </div>
-                    <!-- Decorative elements -->
                     <div class="absolute -top-4 -right-4 w-20 h-20 bg-[#48B3AF]/10 rounded-full"></div>
                     <div class="absolute -bottom-4 -left-4 w-16 h-16 bg-[#48B3AF]/20 rounded-full"></div>
                 </div>
             </div>
         </div>
         
-        <!-- Scroll indicator -->
         <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-gray-400 animate-bounce">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
@@ -128,16 +248,10 @@
         </div>
     </section>
 
-    <!-- 
-    ====================================================================
-    SKILLS SECTION - MODERN CARD DESIGN
-    TO UPDATE: Modify the skills lists below
-    ==================================================================== 
-    -->
+    <!-- SKILLS SECTION -->
     <section id="skills" class="py-20 bg-gray-50">
         <div class="container mx-auto px-6 text-center">
             <h2 class="text-4xl font-light text-gray-900 mb-4">SKILLS</h2>
-            <!-- SKILLS DESCRIPTION: Update this description -->
             <p class="text-xl text-gray-600 mb-16 max-w-3xl mx-auto">
                 I've built a solid skill set in both technical and interpersonal areas, helping me transform data into actionable insights and collaborate effectively with others.
             </p>
@@ -147,7 +261,6 @@
                 <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
                     <h3 class="text-2xl font-semibold text-gray-900 mb-8">Technical Skills</h3>
                     <div class="space-y-4">
-                        <!-- TECHNICAL SKILLS: Add or remove skills here -->
                         <div class="flex items-center justify-between p-4 bg-gray-50 rounded-lg">
                             <span class="text-lg font-medium text-gray-800">Microsoft Excel</span>
                             <div class="w-3 h-3 bg-[#48B3AF] rounded-full"></div>
@@ -171,7 +284,6 @@
                 <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
                     <h3 class="text-2xl font-semibold text-gray-900 mb-8">Soft Skills</h3>
                     <div class="space-y-4">
-                        <!-- SOFT SKILLS: Add or remove skills here -->
                         <div class="flex items-center justify-between p-4 bg-gray-50 rounded-lg">
                             <span class="text-lg font-medium text-gray-800">Data Storytelling</span>
                             <div class="w-3 h-3 bg-[#48B3AF] rounded-full"></div>
@@ -194,12 +306,7 @@
         </div>
     </section>
 
-    <!-- 
-    ====================================================================
-    PROJECTS SECTION - MODERN CARDS WITH MODALS
-    TO UPDATE: Modify project details, add images to assets/projects/ folder
-    ==================================================================== 
-    -->
+    <!-- PROJECTS SECTION -->
     <section id="projects" class="py-20 bg-white">
         <div class="container mx-auto px-6 text-center">
             <h2 class="text-4xl font-light text-gray-900 mb-4">PROJECTS</h2>
@@ -224,9 +331,9 @@
                             <span class="bg-[#48B3AF]/10 text-[#48B3AF] text-xs font-semibold px-3 py-1 rounded-full">SQL</span>
                             <span class="bg-[#48B3AF]/10 text-[#48B3AF] text-xs font-semibold px-3 py-1 rounded-full">Data Visualization</span>
                         </div>
-                        <button onclick="openProjectModal('project1')" class="w-full bg-[#48B3AF] text-white font-semibold py-3 px-4 rounded-lg hover:bg-[#3da39f] transition-colors duration-300">
+                        <a href="project1.html" class="w-full bg-[#48B3AF] text-white font-semibold py-3 px-4 rounded-lg hover:bg-[#3da39f] transition-colors duration-300 block text-center">
                             View Details
-                        </button>
+                        </a>
                     </div>
                 </div>
 
@@ -246,9 +353,9 @@
                             <span class="bg-[#48B3AF]/10 text-[#48B3AF] text-xs font-semibold px-3 py-1 rounded-full">Machine Learning</span>
                             <span class="bg-[#48B3AF]/10 text-[#48B3AF] text-xs font-semibold px-3 py-1 rounded-full">Analytics</span>
                         </div>
-                        <button onclick="openProjectModal('project2')" class="w-full bg-[#48B3AF] text-white font-semibold py-3 px-4 rounded-lg hover:bg-[#3da39f] transition-colors duration-300">
+                        <a href="project2.html" class="w-full bg-[#48B3AF] text-white font-semibold py-3 px-4 rounded-lg hover:bg-[#3da39f] transition-colors duration-300 block text-center">
                             View Details
-                        </button>
+                        </a>
                     </div>
                 </div>
 
@@ -268,35 +375,16 @@
                             <span class="bg-[#48B3AF]/10 text-[#48B3AF] text-xs font-semibold px-3 py-1 rounded-full">Data Cleaning</span>
                             <span class="bg-[#48B3AF]/10 text-[#48B3AF] text-xs font-semibold px-3 py-1 rounded-full">Reporting</span>
                         </div>
-                        <button onclick="openProjectModal('project3')" class="w-full bg-[#48B3AF] text-white font-semibold py-3 px-4 rounded-lg hover:bg-[#3da39f] transition-colors duration-300">
+                        <a href="project3.html" class="w-full bg-[#48B3AF] text-white font-semibold py-3 px-4 rounded-lg hover:bg-[#3da39f] transition-colors duration-300 block text-center">
                             View Details
-                        </button>
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 
-    ====================================================================
-    PROJECT MODALS - DETAILED PROJECT VIEWS
-    ==================================================================== 
-    -->
-    <!-- Project Modal Backdrop -->
-    <div id="modal-backdrop" class="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 hidden opacity-0 transition-opacity duration-300">
-        <div class="flex items-center justify-center min-h-screen p-4">
-            <div id="modal-content" class="bg-white rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto transform scale-95 transition-transform duration-300">
-                <!-- Modal content will be dynamically inserted here -->
-            </div>
-        </div>
-    </div>
-
-    <!-- 
-    ====================================================================
-    EXPERIENCE SECTION - MODERN TIMELINE
-    TO UPDATE: Modify job details, companies, and descriptions
-    ==================================================================== 
-    -->
+    <!-- EXPERIENCE SECTION -->
     <section id="experience" class="py-20 bg-gray-50">
         <div class="container mx-auto px-6 max-w-4xl text-center">
             <h2 class="text-4xl font-light text-gray-900 mb-16">EXPERIENCE</h2>
@@ -309,7 +397,7 @@
                             <h3 class="text-2xl font-semibold text-gray-900">Route Dispatcher</h3>
                             <p class="text-lg text-[#48B3AF] font-medium">Daraz Bangladesh Limited</p>
                         </div>
-                        <span class="text-sm font-medium text-gray-500 bg-gray-100 px-3 py-1 rounded-full">Aug 2024 – Present</span>
+                        <span class="text-sm font-medium text-gray-500 bg-gray-100 px-3 py-1 rounded-full">Aug 2024 — Present</span>
                     </div>
                     <p class="text-gray-600 leading-relaxed">Planned and optimized delivery routes for maximum efficiency and timely deliveries. Monitored driver performance, reducing delays and improving customer experience. Learned to analyze logistics data and spot operational bottlenecks.</p>
                 </div>
@@ -321,7 +409,7 @@
                             <h3 class="text-2xl font-semibold text-gray-900">Operation Associate</h3>
                             <p class="text-lg text-[#48B3AF] font-medium">Daraz Bangladesh Limited</p>
                         </div>
-                        <span class="text-sm font-medium text-gray-500 bg-gray-100 px-3 py-1 rounded-full">Oct 2022 – Jul 2024</span>
+                        <span class="text-sm font-medium text-gray-500 bg-gray-100 px-3 py-1 rounded-full">Oct 2022 — Jul 2024</span>
                     </div>
                     <p class="text-gray-600 leading-relaxed">Coordinated day-to-day warehouse and logistics operations. Analyzed operational data to identify inefficiencies and suggest process improvements. Collaborated with various teams to ensure smooth and timely order fulfillment.</p>
                 </div>
@@ -333,7 +421,7 @@
                             <h3 class="text-2xl font-semibold text-gray-900">Jr. Executive</h3>
                             <p class="text-lg text-[#48B3AF] font-medium">Xtreme Solution</p>
                         </div>
-                        <span class="text-sm font-medium text-gray-500 bg-gray-100 px-3 py-1 rounded-full">Aug 2021 – Sep 2021</span>
+                        <span class="text-sm font-medium text-gray-500 bg-gray-100 px-3 py-1 rounded-full">Aug 2021 — Sep 2021</span>
                     </div>
                     <p class="text-gray-600 leading-relaxed">Coordinated day-to-day operations and supported process improvements to enhance service quality. Worked closely with cross-functional teams, streamlining workflows and boosting efficiency. Discovered passion for using data to solve business problems.</p>
                 </div>
@@ -345,24 +433,18 @@
                             <h3 class="text-2xl font-semibold text-gray-900">Customer Service Associate</h3>
                             <p class="text-lg text-[#48B3AF] font-medium">Genex Infosys Limited</p>
                         </div>
-                        <span class="text-sm font-medium text-gray-500 bg-gray-100 px-3 py-1 rounded-full">Dec 2017 – Aug 2020</span>
+                        <span class="text-sm font-medium text-gray-500 bg-gray-100 px-3 py-1 rounded-full">Dec 2017 — Aug 2020</span>
                     </div>
-                    <p class="text-gray-600 leading-relaxed">Handled 120+ customers daily, achieved A-Bucket for 15 months straight, and won 2 Best Employee Awards. Promoted to team mentor in 3 months and trained 25–30 people, leading them to win Best Team Award. Built strong communication and mentoring skills.</p>
+                    <p class="text-gray-600 leading-relaxed">Handled 120+ customers daily, achieved A-Bucket for 15 months straight, and won 2 Best Employee Awards. Promoted to team mentor in 3 months and trained 25—30 people, leading them to win Best Team Award. Built strong communication and mentoring skills.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 
-    ====================================================================
-    ABOUT ME SECTION - MODERN CLEAN DESIGN
-    TO UPDATE: Change the about text below
-    ==================================================================== 
-    -->
+    <!-- ABOUT ME SECTION -->
     <section id="about" class="py-20 bg-white">
         <div class="container mx-auto px-6 max-w-4xl text-center">
             <h2 class="text-4xl font-light text-gray-900 mb-8">ABOUT ME</h2>
-            <!-- ABOUT TEXT: Update this paragraph with your own story -->
             <div class="bg-gray-50 rounded-2xl p-8 lg:p-12">
                 <p class="text-lg text-gray-700 leading-relaxed">
                     I started my career in 2017 as a Customer Service Associate, and it didn't take long for me to discover the power of Excel. I still remember the first time I updated a file that helped over 200 colleagues serve customers more smoothly—it felt like I'd found a superpower. That spark led me to explore data analytics in 2021. Since then, I've been learning and applying tools like Power BI and SQL to solve real-world problems, whether at work, in organizations I collaborate with, or even for friends and family. My goal is simple: turn everyday data into insights that make decisions easier and processes smarter.
@@ -371,19 +453,14 @@
         </div>
     </section>
 
-    <!-- 
-    ====================================================================
-    CONTACT SECTION - MODERN CARD DESIGN
-    TO UPDATE: Change contact details here
-    ==================================================================== 
-    -->
+    <!-- CONTACT SECTION -->
     <section id="contact" class="py-20 bg-gray-50">
         <div class="container mx-auto px-6 text-center max-w-4xl">
             <h2 class="text-4xl font-light text-gray-900 mb-4">CONTACT ME</h2>
             <p class="text-xl text-gray-600 mb-16">I typically respond within 24 hours.</p>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                 
-                <!-- Email Card - CLICKABLE -->
+                <!-- Email Card -->
                 <a href="mailto:rokibchi@gmail.com" class="contact-card bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 cursor-pointer group">
                     <div class="w-16 h-16 bg-[#48B3AF]/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-[#48B3AF] transition-colors duration-300">
                         <i class="fa-solid fa-envelope text-2xl text-[#48B3AF] group-hover:text-white transition-colors duration-300"></i>
@@ -392,7 +469,7 @@
                     <span class="text-gray-600 group-hover:text-[#48B3AF] transition-colors duration-300">rokibchi@gmail.com</span>
                 </a>
                 
-                <!-- WhatsApp Card - CLICKABLE -->
+                <!-- WhatsApp Card -->
                 <a href="https://wa.me/8801866607355" target="_blank" class="contact-card bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 cursor-pointer group">
                     <div class="w-16 h-16 bg-[#48B3AF]/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-[#48B3AF] transition-colors duration-300">
                         <i class="fa-brands fa-whatsapp text-2xl text-[#48B3AF] group-hover:text-white transition-colors duration-300"></i>
@@ -401,7 +478,7 @@
                     <span class="text-gray-600 group-hover:text-[#48B3AF] transition-colors duration-300">+880 1866 607355</span>
                 </a>
                 
-                <!-- LinkedIn Card - CLICKABLE -->
+                <!-- LinkedIn Card -->
                 <a href="https://www.linkedin.com/in/rokiib" target="_blank" class="contact-card bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 cursor-pointer group">
                     <div class="w-16 h-16 bg-[#48B3AF]/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-[#48B3AF] transition-colors duration-300">
                         <i class="fa-brands fa-linkedin text-2xl text-[#48B3AF] group-hover:text-white transition-colors duration-300"></i>
@@ -421,6 +498,70 @@
     </footer>
 
     <!-- JavaScript -->
-    <script src="script.js"></script>
+    <script>
+        // Mobile menu functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuButton = document.getElementById('menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            if (menuButton && mobileMenu) {
+                menuButton.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                });
+
+                // Close mobile menu when clicking on links
+                mobileMenu.querySelectorAll('a').forEach(link => {
+                    link.addEventListener('click', () => {
+                        mobileMenu.classList.add('hidden');
+                    });
+                });
+            }
+
+            // Resume button functionality
+            const resumeButtons = document.querySelectorAll('#resume-btn, #mobile-resume-btn');
+            resumeButtons.forEach(button => {
+                button.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    alert('Resume will be available soon! Please contact me for more details.');
+                });
+            });
+
+            // Smooth scrolling
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        const headerOffset = 80;
+                        const elementPosition = target.getBoundingClientRect().top;
+                        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                        window.scrollTo({
+                            top: offsetPosition,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+
+            // Update copyright year
+            const yearElement = document.getElementById('current-year');
+            if (yearElement) {
+                yearElement.textContent = new Date().getFullYear();
+            }
+
+            // Header scroll effect
+            window.addEventListener('scroll', () => {
+                const header = document.querySelector('header');
+                if (window.scrollY > 50) {
+                    header.style.backgroundColor = 'rgba(254, 254, 254, 0.95)';
+                    header.style.backdropFilter = 'blur(20px)';
+                } else {
+                    header.style.backgroundColor = 'rgba(254, 254, 254, 0.85)';
+                    header.style.backdropFilter = 'blur(10px)';
+                }
+            });
+        });
+    </script>
 </body>
 </html>
