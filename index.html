@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Mohammad Rokib Hasan - Data Analytics Portfolio. Expert in Power BI, SQL, Excel for data-driven insights.">
+    <meta name="keywords" content="Data Analytics, Power BI, SQL, Excel, Data Visualization, Business Intelligence">
+    <meta name="author" content="Mohammad Rokib Hasan">
+    <title>Mohammad Rokib Hasan - Data Analytics Portfolio</title>
+    
+    <!-- External Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- External Libraries -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-white text-gray-800">
+
+    <!-- 
+    ====================================================================
+    HEADER NAVIGATION - MODERN GLASS DESIGN
+    TO UPDATE NAVIGATION: Change the href links and text below
+    ==================================================================== 
+    -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-lg shadow-sm border-b border-gray-200">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <!-- Logo -->
+            <a href="#hero" class="text-xl font-bold text-gray-800 hover:text-[#48B3AF] transition-colors">RH</a>
+            
+            <!-- Desktop Navigation -->
+            <div class="hidden md:flex space-x-8 text-sm font-medium items-center">
+                <a href="#skills" class="text-gray-600 hover:text-[#48B3AF] transition-colors duration-300">Skills</a>
+                <a href="#projects" class="text-gray-600 hover:text-[#48B3AF] transition-colors duration-300">Projects</a>
+                <a href="#experience" class="text-gray-600 hover:text-[#48B3AF] transition-colors duration-300">Experience</a>
+                <a href="#about" class="text-gray-600 hover:text-[#48B3AF] transition-colors duration-300">About</a>
+                <a href="#contact" class="text-gray-600 hover:text-[#48B3AF] transition-colors duration-300">Contact</a>
+                <a id="resume-btn" href="#" class="bg-[#48B3AF] text-white font-semibold py-2.5 px-6 rounded-lg shadow-lg hover:bg-[#3da39f] transition-all duration-300 hover:shadow-xl">
+                    <span>Resume</span>
+                </a>
+            </div>
+            
+            <!-- Mobile Menu Button -->
+            <div class="md:hidden flex items-center">
+                <button id="menu-button" class="text-gray-800 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+        </nav>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white/95 backdrop-blur-lg shadow-lg border-t border-gray-200">
+            <a href="#skills" class="block py-3 px-6 text-gray-600 hover:text-[#48B3AF] hover:bg-gray-50 transition-colors duration-300">Skills</a>
+            <a href="#projects" class="block py-3 px-6 text-gray-600 hover:text-[#48B3AF] hover:bg-gray-50 transition-colors duration-300">Projects</a>
+            <a href="#experience" class="block py-3 px-6 text-gray-600 hover:text-[#48B3AF] hover:bg-gray-50 transition-colors duration-300">Experience</a>
+            <a href="#about" class="block py-3 px-6 text-gray-600 hover:text-[#48B3AF] hover:bg-gray-50 transition-colors duration-300">About</a>
+            <a href="#contact" class="block py-3 px-6 text-gray-600 hover:text-[#48B3AF] hover:bg-gray-50 transition-colors duration-300">Contact</a>
+            <a id="mobile-resume-btn" href="#" class="block py-3 px-6 bg-[#48B3AF] text-white font-semibold hover:bg-[#3da39f] transition-colors duration-300 text-center">Resume</a>
+        </div>
+    </header>
+
+    <!-- 
+    ====================================================================
+    HERO SECTION - MODERN CLEAN DESIGN
+    TO UPDATE: Change name, tagline, or hero image path
+    ==================================================================== 
+    -->
+    <section id="hero" class="relative pt-24 pb-16 md:pt-32 md:pb-24 min-h-screen flex items-center bg-gradient-to-br from-gray-50 to-white">
+        <div class="container mx-auto px-6 flex flex-col md:flex-row items-center justify-between">
+            <!-- Left side content -->
+            <div class="md:w-1/2 text-center md:text-left mb-10 md:mb-0">
+                <!-- HERO NAME: Update this text to change your name -->
+                <h1 class="text-5xl sm:text-6xl lg:text-7xl font-light text-gray-900 leading-tight mb-6">
+                    MOHAMMAD <br>
+                    <span class="font-bold text-[#48B3AF]">ROKIB</span> <br>
+                    <span class="font-light">HASAN</span>
+                </h1>
+                <!-- HERO TAGLINE: Update this text to change your tagline -->
+                <p class="text-xl sm:text-2xl text-gray-600 mb-8 leading-relaxed">
+                    Transforming data into <br> 
+                    <span class="text-[#48B3AF] font-semibold">actionable insights</span>
+                </p>
+                
+                <div class="flex justify-center md:justify-start space-x-4">
+                    <a href="#projects" class="bg-[#48B3AF] text-white font-semibold py-4 px-8 rounded-lg shadow-lg hover:bg-[#3da39f] transition-all duration-300 hover:shadow-xl hover:-translate-y-1 flex items-center space-x-2">
+                        <span>View Projects</span>
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                        </svg>
+                    </a>
+                    <a href="#contact" class="bg-white text-[#48B3AF] font-semibold py-4 px-8 rounded-lg shadow-lg border-2 border-[#48B3AF] hover:bg-[#48B3AF] hover:text-white transition-all duration-300 hover:shadow-xl hover:-translate-y-1 flex items-center space-x-2">
+                        <span>Contact Me</span>
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8m-9 13l-9-5V7l9 5 9-5v5l-9 5z"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Right side image -->
+            <div class="md:w-1/2 flex justify-center md:justify-end">
+                <div class="relative">
+                    <div class="w-80 h-80 lg:w-96 lg:h-96 rounded-full bg-gradient-to-br from-[#48B3AF] to-[#3da39f] p-1 shadow-2xl">
+                        <div class="w-full h-full bg-white rounded-full p-4 flex items-center justify-center">
+                            <!-- HERO IMAGE: Replace the src path to use your own image -->
+                            <img src="https://rokiib.github.io/assets/hero.png" alt="Mohammad Rokib Hasan" class="w-full h-full object-cover rounded-full">
+                        </div>
+                    </div>
+                    <!-- Decorative elements -->
+                    <div class="absolute -top-4 -right-4 w-20 h-20 bg-[#48B3AF]/10 rounded-full"></div>
+                    <div class="absolute -bottom-4 -left-4 w-16 h-16 bg-[#48B3AF]/20 rounded-full"></div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Scroll indicator -->
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-gray-400 animate-bounce">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- 
+    ====================================================================
+    SKILLS SECTION - MODERN CARD DESIGN
+    TO UPDATE: Modify the skills lists below
+    ==================================================================== 
+    -->
+    <section id="skills" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-4xl font-light text-gray-900 mb-4">SKILLS</h2>
+            <!-- SKILLS DESCRIPTION: Update this description -->
+            <p class="text-xl text-gray-600 mb-16 max-w-3xl mx-auto">
+                I've built a solid skill set in both technical and interpersonal areas, helping me transform data into actionable insights and collaborate effectively with others.
+            </p>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+                <!-- Technical Skills -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <h3 class="text-2xl font-semibold text-gray-900 mb-8">Technical Skills</h3>
+                    <div class="space-y-4">
+                        <!-- TECHNICAL SKILLS: Add or remove skills here -->
+                        <div class="flex items-center justify-between p-4 bg-gray-50 rounded-lg">
+                            <span class="text-lg font-medium text-gray-800">Microsoft Excel</span>
+                            <div class="w-3 h-3 bg-[#48B3AF] rounded-full"></div>
+                        </div>
+                        <div class="flex items-center justify-between p-4 bg-gray-50 rounded-lg">
+                            <span class="text-lg font-medium text-gray-800">Google Sheets</span>
+                            <div class="w-3 h-3 bg-[#48B3AF] rounded-full"></div>
+                        </div>
+                        <div class="flex items-center justify-between p-4 bg-gray-50 rounded-lg">
+                            <span class="text-lg font-medium text-gray-800">Power BI</span>
+                            <div class="w-3 h-3 bg-[#48B3AF] rounded-full"></div>
+                        </div>
+                        <div class="flex items-center justify-between p-4 bg-gray-50 rounded-lg">
+                            <span class="text-lg font-medium text-gray-800">SQL</span>
+                            <div class="w-3 h-3 bg-[#48B3AF] rounded-full"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Soft Skills -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <h3 class="text-2xl font-semibold text-gray-900 mb-8">Soft Skills</h3>
+                    <div class="space-y-4">
+                        <!-- SOFT SKILLS: Add or remove skills here -->
+                        <div class="flex items-center justify-between p-4 bg-gray-50 rounded-lg">
+                            <span class="text-lg font-medium text-gray-800">Data Storytelling</span>
+                            <div class="w-3 h-3 bg-[#48B3AF] rounded-full"></div>
+                        </div>
+                        <div class="flex items-center justify-between p-4 bg-gray-50 rounded-lg">
+                            <span class="text-lg font-medium text-gray-800">Problem-Solving Mindset</span>
+                            <div class="w-3 h-3 bg-[#48B3AF] rounded-full"></div>
+                        </div>
+                        <div class="flex items-center justify-between p-4 bg-gray-50 rounded-lg">
+                            <span class="text-lg font-medium text-gray-800">Attention to Detail</span>
+                            <div class="w-3 h-3 bg-[#48B3AF] rounded-full"></div>
+                        </div>
+                        <div class="flex items-center justify-between p-4 bg-gray-50 rounded-lg">
+                            <span class="text-lg font-medium text-gray-800">Team Player</span>
+                            <div class="w-3 h-3 bg-[#48B3AF] rounded-full"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 
+    ====================================================================
+    PROJECTS SECTION - MODERN CARDS WITH MODALS
+    TO UPDATE: Modify project details, add images to assets/projects/ folder
+    ==================================================================== 
+    -->
+    <section id="projects" class="py-20 bg-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-4xl font-light text-gray-900 mb-4">PROJECTS</h2>
+            <p class="text-xl text-gray-600 mb-16 max-w-3xl mx-auto">
+                Explore my data analytics projects that showcase problem-solving through data visualization and insights.
+            </p>
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+
+                <!-- PROJECT 1: E-commerce Dashboard -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-gray-100">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=250&fit=crop" alt="E-commerce Dashboard" class="w-full h-48 object-cover">
+                        <div class="absolute inset-0 bg-[#48B3AF]/10"></div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-3">E-commerce Operations Dashboard</h3>
+                        <p class="text-gray-600 mb-4 text-sm leading-relaxed">
+                            Interactive Power BI dashboard tracking key operational metrics including order fulfillment, customer satisfaction, and team performance.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="bg-[#48B3AF]/10 text-[#48B3AF] text-xs font-semibold px-3 py-1 rounded-full">Power BI</span>
+                            <span class="bg-[#48B3AF]/10 text-[#48B3AF] text-xs font-semibold px-3 py-1 rounded-full">SQL</span>
+                            <span class="bg-[#48B3AF]/10 text-[#48B3AF] text-xs font-semibold px-3 py-1 rounded-full">Data Visualization</span>
+                        </div>
+                        <button onclick="openProjectModal('project1')" class="w-full bg-[#48B3AF] text-white font-semibold py-3 px-4 rounded-lg hover:bg-[#3da39f] transition-colors duration-300">
+                            View Details
+                        </button>
+                    </div>
+                </div>
+
+                <!-- PROJECT 2: Customer Churn Analysis -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-gray-100">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=250&fit=crop" alt="Customer Churn Analysis" class="w-full h-48 object-cover">
+                        <div class="absolute inset-0 bg-[#48B3AF]/10"></div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-3">Customer Churn Analysis</h3>
+                        <p class="text-gray-600 mb-4 text-sm leading-relaxed">
+                            Analyzed customer behavior data to identify key factors leading to churn, creating a predictive model to retain at-risk customers.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="bg-[#48B3AF]/10 text-[#48B3AF] text-xs font-semibold px-3 py-1 rounded-full">Python</span>
+                            <span class="bg-[#48B3AF]/10 text-[#48B3AF] text-xs font-semibold px-3 py-1 rounded-full">Machine Learning</span>
+                            <span class="bg-[#48B3AF]/10 text-[#48B3AF] text-xs font-semibold px-3 py-1 rounded-full">Analytics</span>
+                        </div>
+                        <button onclick="openProjectModal('project2')" class="w-full bg-[#48B3AF] text-white font-semibold py-3 px-4 rounded-lg hover:bg-[#3da39f] transition-colors duration-300">
+                            View Details
+                        </button>
+                    </div>
+                </div>
+
+                <!-- PROJECT 3: Regional Sales Performance -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-gray-100">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1579952363873-27d3bfad9c0d?w=400&h=250&fit=crop" alt="Sales Performance Dashboard" class="w-full h-48 object-cover">
+                        <div class="absolute inset-0 bg-[#48B3AF]/10"></div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-3">Regional Sales Performance</h3>
+                        <p class="text-gray-600 mb-4 text-sm leading-relaxed">
+                            Interactive Excel dashboard tracking sales performance across regions, identifying top-performing areas and growth opportunities.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="bg-[#48B3AF]/10 text-[#48B3AF] text-xs font-semibold px-3 py-1 rounded-full">Excel</span>
+                            <span class="bg-[#48B3AF]/10 text-[#48B3AF] text-xs font-semibold px-3 py-1 rounded-full">Data Cleaning</span>
+                            <span class="bg-[#48B3AF]/10 text-[#48B3AF] text-xs font-semibold px-3 py-1 rounded-full">Reporting</span>
+                        </div>
+                        <button onclick="openProjectModal('project3')" class="w-full bg-[#48B3AF] text-white font-semibold py-3 px-4 rounded-lg hover:bg-[#3da39f] transition-colors duration-300">
+                            View Details
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 
+    ====================================================================
+    PROJECT MODALS - DETAILED PROJECT VIEWS
+    ==================================================================== 
+    -->
+    <!-- Project Modal Backdrop -->
+    <div id="modal-backdrop" class="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 hidden opacity-0 transition-opacity duration-300">
+        <div class="flex items-center justify-center min-h-screen p-4">
+            <div id="modal-content" class="bg-white rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto transform scale-95 transition-transform duration-300">
+                <!-- Modal content will be dynamically inserted here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- 
+    ====================================================================
+    EXPERIENCE SECTION - MODERN TIMELINE
+    TO UPDATE: Modify job details, companies, and descriptions
+    ==================================================================== 
+    -->
+    <section id="experience" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6 max-w-4xl text-center">
+            <h2 class="text-4xl font-light text-gray-900 mb-16">EXPERIENCE</h2>
+
+            <div class="space-y-8">
+                <!-- JOB 1: Current Position -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 text-left">
+                    <div class="flex justify-between items-start mb-4">
+                        <div>
+                            <h3 class="text-2xl font-semibold text-gray-900">Route Dispatcher</h3>
+                            <p class="text-lg text-[#48B3AF] font-medium">Daraz Bangladesh Limited</p>
+                        </div>
+                        <span class="text-sm font-medium text-gray-500 bg-gray-100 px-3 py-1 rounded-full">Aug 2024 – Present</span>
+                    </div>
+                    <p class="text-gray-600 leading-relaxed">Planned and optimized delivery routes for maximum efficiency and timely deliveries. Monitored driver performance, reducing delays and improving customer experience. Learned to analyze logistics data and spot operational bottlenecks.</p>
+                </div>
+                
+                <!-- JOB 2: Previous Position -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 text-left">
+                    <div class="flex justify-between items-start mb-4">
+                        <div>
+                            <h3 class="text-2xl font-semibold text-gray-900">Operation Associate</h3>
+                            <p class="text-lg text-[#48B3AF] font-medium">Daraz Bangladesh Limited</p>
+                        </div>
+                        <span class="text-sm font-medium text-gray-500 bg-gray-100 px-3 py-1 rounded-full">Oct 2022 – Jul 2024</span>
+                    </div>
+                    <p class="text-gray-600 leading-relaxed">Coordinated day-to-day warehouse and logistics operations. Analyzed operational data to identify inefficiencies and suggest process improvements. Collaborated with various teams to ensure smooth and timely order fulfillment.</p>
+                </div>
+                
+                <!-- JOB 3: Earlier Position -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 text-left">
+                    <div class="flex justify-between items-start mb-4">
+                        <div>
+                            <h3 class="text-2xl font-semibold text-gray-900">Jr. Executive</h3>
+                            <p class="text-lg text-[#48B3AF] font-medium">Xtreme Solution</p>
+                        </div>
+                        <span class="text-sm font-medium text-gray-500 bg-gray-100 px-3 py-1 rounded-full">Aug 2021 – Sep 2021</span>
+                    </div>
+                    <p class="text-gray-600 leading-relaxed">Coordinated day-to-day operations and supported process improvements to enhance service quality. Worked closely with cross-functional teams, streamlining workflows and boosting efficiency. Discovered passion for using data to solve business problems.</p>
+                </div>
+
+                <!-- JOB 4: Starting Position -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 text-left">
+                    <div class="flex justify-between items-start mb-4">
+                        <div>
+                            <h3 class="text-2xl font-semibold text-gray-900">Customer Service Associate</h3>
+                            <p class="text-lg text-[#48B3AF] font-medium">Genex Infosys Limited</p>
+                        </div>
+                        <span class="text-sm font-medium text-gray-500 bg-gray-100 px-3 py-1 rounded-full">Dec 2017 – Aug 2020</span>
+                    </div>
+                    <p class="text-gray-600 leading-relaxed">Handled 120+ customers daily, achieved A-Bucket for 15 months straight, and won 2 Best Employee Awards. Promoted to team mentor in 3 months and trained 25–30 people, leading them to win Best Team Award. Built strong communication and mentoring skills.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 
+    ====================================================================
+    ABOUT ME SECTION - MODERN CLEAN DESIGN
+    TO UPDATE: Change the about text below
+    ==================================================================== 
+    -->
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-6 max-w-4xl text-center">
+            <h2 class="text-4xl font-light text-gray-900 mb-8">ABOUT ME</h2>
+            <!-- ABOUT TEXT: Update this paragraph with your own story -->
+            <div class="bg-gray-50 rounded-2xl p-8 lg:p-12">
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    I started my career in 2017 as a Customer Service Associate, and it didn't take long for me to discover the power of Excel. I still remember the first time I updated a file that helped over 200 colleagues serve customers more smoothly—it felt like I'd found a superpower. That spark led me to explore data analytics in 2021. Since then, I've been learning and applying tools like Power BI and SQL to solve real-world problems, whether at work, in organizations I collaborate with, or even for friends and family. My goal is simple: turn everyday data into insights that make decisions easier and processes smarter.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 
+    ====================================================================
+    CONTACT SECTION - MODERN CARD DESIGN
+    TO UPDATE: Change contact details here
+    ==================================================================== 
+    -->
+    <section id="contact" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6 text-center max-w-4xl">
+            <h2 class="text-4xl font-light text-gray-900 mb-4">CONTACT ME</h2>
+            <p class="text-xl text-gray-600 mb-16">I typically respond within 24 hours.</p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                
+                <!-- Email Card - CLICKABLE -->
+                <a href="mailto:rokibchi@gmail.com" class="contact-card bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 cursor-pointer group">
+                    <div class="w-16 h-16 bg-[#48B3AF]/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-[#48B3AF] transition-colors duration-300">
+                        <i class="fa-solid fa-envelope text-2xl text-[#48B3AF] group-hover:text-white transition-colors duration-300"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Email</h3>
+                    <span class="text-gray-600 group-hover:text-[#48B3AF] transition-colors duration-300">rokibchi@gmail.com</span>
+                </a>
+                
+                <!-- WhatsApp Card - CLICKABLE -->
+                <a href="https://wa.me/8801866607355" target="_blank" class="contact-card bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 cursor-pointer group">
+                    <div class="w-16 h-16 bg-[#48B3AF]/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-[#48B3AF] transition-colors duration-300">
+                        <i class="fa-brands fa-whatsapp text-2xl text-[#48B3AF] group-hover:text-white transition-colors duration-300"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">WhatsApp</h3>
+                    <span class="text-gray-600 group-hover:text-[#48B3AF] transition-colors duration-300">+880 1866 607355</span>
+                </a>
+                
+                <!-- LinkedIn Card - CLICKABLE -->
+                <a href="https://www.linkedin.com/in/rokiib" target="_blank" class="contact-card bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 cursor-pointer group">
+                    <div class="w-16 h-16 bg-[#48B3AF]/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-[#48B3AF] transition-colors duration-300">
+                        <i class="fa-brands fa-linkedin text-2xl text-[#48B3AF] group-hover:text-white transition-colors duration-300"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">LinkedIn</h3>
+                    <span class="text-gray-600 group-hover:text-[#48B3AF] transition-colors duration-300">Rokib Hasan</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 bg-white border-t border-gray-200 text-center text-gray-500">
+        <div class="container mx-auto px-6">
+            <p class="text-sm">&copy; <span id="current-year"></span> Mohammad Rokib Hasan. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
